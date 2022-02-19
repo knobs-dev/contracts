@@ -166,7 +166,7 @@ Distributed under the MIT License. See the `LICENSE` file for more information.
 <!-- CONTACT -->
 ## Contact 📬
 
-Your Name - [@your_twitter](https://twitter.com/KnobsBlockchain) - info@knobs.it
+Your Name - [@KnobsBlockchain](https://twitter.com/KnobsBlockchain) - info@knobs.it
 
 Project Link: [https://github.com/knobs-dev/arrays-to-go](https://github.com/knobs-dev/arrays-to-go)
 
