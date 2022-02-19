@@ -1,10 +1,9 @@
-// SPDX-License-Identifier: GPL-3.0
-pragma solidity 0.8.11;
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.12;
 
 import "./IArraysToGo.sol";
 
-contract Test {
-
+contract IntegrationTest {
     uint256[] public tokenIds;
 
     constructor(address arrayToGoAddress, string memory arrayName) {

@@ -5,8 +5,11 @@
   "license": "MIT",
   "scripts": {
     "test": "npx hardhat test",
-    "test:gas": "REPORT_GAS=1 npx hardhat test",
-    "test:gas:integration": "REPORT_GAS=1 npx hardhat test test/2_integration.ts"
+    "test:gas": "REPORT_GAS=true npx hardhat test",
+    "test:gas:setup": "REPORT_GAS=true npx hardhat test test/1_setup.ts",
+    "test:gas:integration": "REPORT_GAS=true npx hardhat test test/2_integration.ts",
+    "test:coverage": "npx hardhat coverage",
+    "test:gas:coverage": "REPORT_GAS=true npx hardhat coverage"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",

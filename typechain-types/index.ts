@@ -3,8 +3,8 @@
 /* eslint-disable */
 export type { ArraysToGo } from "./ArraysToGo";
 export type { IArraysToGo } from "./IArraysToGo";
-export type { Test } from "./Test";
+export type { IntegrationTest } from "./IntegrationTest";
 
 export { ArraysToGo__factory } from "./factories/ArraysToGo__factory";
 export { IArraysToGo__factory } from "./factories/IArraysToGo__factory";
-export { Test__factory } from "./factories/Test__factory";
+export { IntegrationTest__factory } from "./factories/IntegrationTest__factory";

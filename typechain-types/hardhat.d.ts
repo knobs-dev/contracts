@@ -21,9 +21,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IArraysToGo__factory>;
     getContractFactory(
-      name: "Test",
+      name: "IntegrationTest",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Test__factory>;
+    ): Promise<Contracts.IntegrationTest__factory>;
 
     getContractAt(
       name: "ArraysToGo",
@@ -36,10 +36,10 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.IArraysToGo>;
     getContractAt(
-      name: "Test",
+      name: "IntegrationTest",
       address: string,
       signer?: ethers.Signer
-    ): Promise<Contracts.Test>;
+    ): Promise<Contracts.IntegrationTest>;
 
     // default types
     getContractFactory(

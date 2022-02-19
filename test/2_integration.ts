@@ -4,8 +4,8 @@ import { ethers } from "hardhat";
 import {
   ArraysToGo,
   ArraysToGo__factory,
-  Test__factory,
-  Test,
+  IntegrationTest__factory,
+  IntegrationTest,
 } from "../typechain-types";
 
 describe("Integration", function () {
@@ -13,16 +13,18 @@ describe("Integration", function () {
   let arraysToGoContract: Contract;
   let arraysToGoInstance: ArraysToGo;
 
-  let testFactory: Test__factory;
+  let testFactory: IntegrationTest__factory;
   let testContract: Contract;
-  let testInstance: Test;
+  let testInstance: IntegrationTest;
 
   before(async function () {
     arraysToGoFactory = (await ethers.getContractFactory(
       "ArraysToGo"
     )) as ArraysToGo__factory;
 
-    testFactory = (await ethers.getContractFactory("Test")) as Test__factory;
+    testFactory = (await ethers.getContractFactory(
+      "IntegrationTest"
+    )) as IntegrationTest__factory;
   });
 
   beforeEach(async function () {
@@ -36,7 +38,7 @@ describe("Integration", function () {
     expect(arraysToGoInstance).not.to.be.undefined;
   });
 
-  it("Should be possible to fill an array with 10 elements", async function () {
+  it("Should be possible to copy the array from ArraysToGo", async function () {
     const [account0] = await ethers.getSigners();
 
     const name = "OneToTen";
@@ -53,7 +55,7 @@ describe("Integration", function () {
       .withArgs(name, limit, hash);
 
     testContract = await testFactory.deploy(arraysToGoInstance.address, name);
-    testInstance = (await testContract.deployed().catch()) as Test;
+    testInstance = (await testContract.deployed().catch()) as IntegrationTest;
 
     const array = await testInstance.getTokenIds();
 

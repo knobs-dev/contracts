@@ -15,8 +15,8 @@ import { FunctionFragment, Result } from "@ethersproject/abi";
 import { Listener, Provider } from "@ethersproject/providers";
 import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from "./common";
 
-export interface TestInterface extends utils.Interface {
-  contractName: "Test";
+export interface IntegrationTestInterface extends utils.Interface {
+  contractName: "IntegrationTest";
   functions: {
     "getTokenIds()": FunctionFragment;
     "tokenIds(uint256)": FunctionFragment;
@@ -40,13 +40,13 @@ export interface TestInterface extends utils.Interface {
   events: {};
 }
 
-export interface Test extends BaseContract {
-  contractName: "Test";
+export interface IntegrationTest extends BaseContract {
+  contractName: "IntegrationTest";
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
 
-  interface: TestInterface;
+  interface: IntegrationTestInterface;
 
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,
