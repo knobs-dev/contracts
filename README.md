@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/knobs-dev/arrays-to-go">
     <img src="images/ArraysToGo.png" alt="Logo" width="160">
   </a>
 
@@ -130,7 +130,7 @@ Clone an existing array
 - [ ] Release on Polygon mainnet
 - [ ] Fill the OneToTenK array
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/knobs-dev/arrays-to-go/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -187,19 +187,18 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/knobs-dev/arrays-to-go.svg?style=for-the-badge
+[contributors-url]: https://github.com/knobs-dev/arrays-to-go/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/knobs-dev/arrays-to-go.svg?style=for-the-badge
+[forks-url]: https://github.com/knobs-dev/arrays-to-go/network/members
+[stars-shield]: https://img.shields.io/github/stars/knobs-dev/arrays-to-go.svg?style=for-the-badge
+[stars-url]: https://github.com/knobs-dev/arrays-to-go/stargazers
+[issues-shield]: https://img.shields.io/github/issues/knobs-dev/arrays-to-go.svg?style=for-the-badge
+[issues-url]: https://github.com/knobs-dev/arrays-to-go/issues
+[license-shield]: https://img.shields.io/github/license/knobs-dev/arrays-to-go.svg?style=for-the-badge
+[license-url]: https://github.com/knobs-dev/arrays-to-go/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+[linkedin-url]: https://www.linkedin.com/company/knobs-blockchain/
 
 
 
