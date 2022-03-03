@@ -12,7 +12,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/knobs-dev/arrays-to-go">
+  <a href="https://github.com/knobs-dev/contracts">
     <img src="docs/images/KNOBS.png" alt="Logo" width="160">
   </a>
 
@@ -118,16 +118,16 @@ Project Link: [https://github.com/knobs-dev/contracts](https://github.com/knobs-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/knobs-dev/arrays-to-go.svg?style=for-the-badge
-[contributors-url]: https://github.com/knobs-dev/arrays-to-go/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/knobs-dev/arrays-to-go.svg?style=for-the-badge
-[forks-url]: https://github.com/knobs-dev/arrays-to-go/network/members
-[stars-shield]: https://img.shields.io/github/stars/knobs-dev/arrays-to-go.svg?style=for-the-badge
-[stars-url]: https://github.com/knobs-dev/arrays-to-go/stargazers
-[issues-shield]: https://img.shields.io/github/issues/knobs-dev/arrays-to-go.svg?style=for-the-badge
-[issues-url]: https://github.com/knobs-dev/arrays-to-go/issues
-[license-shield]: https://img.shields.io/github/license/knobs-dev/arrays-to-go.svg?style=for-the-badge
-[license-url]: https://github.com/knobs-dev/arrays-to-go/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/knobs-dev/contracts.svg?style=for-the-badge
+[contributors-url]: https://github.com/knobs-dev/contracts/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/knobs-dev/contracts.svg?style=for-the-badge
+[forks-url]: https://github.com/knobs-dev/contracts/network/members
+[stars-shield]: https://img.shields.io/github/stars/knobs-dev/contracts.svg?style=for-the-badge
+[stars-url]: https://github.com/knobs-dev/contracts/stargazers
+[issues-shield]: https://img.shields.io/github/issues/knobs-dev/contracts.svg?style=for-the-badge
+[issues-url]: https://github.com/knobs-dev/contracts/issues
+[license-shield]: https://img.shields.io/github/license/knobs-dev/contracts.svg?style=for-the-badge
+[license-url]: https://github.com/knobs-dev/contracts/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/knobs-blockchain/
 
