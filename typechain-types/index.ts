@@ -3,8 +3,12 @@
 /* eslint-disable */
 export type { ArraysToGo } from "./ArraysToGo";
 export type { IArraysToGo } from "./IArraysToGo";
-export type { IntegrationTest } from "./IntegrationTest";
+export type { ArraysToGoIntegrationTest } from "./ArraysToGoIntegrationTest";
+export type { ShuffleIdsIntegrationTest } from "./ShuffleIdsIntegrationTest";
+export type { ShuffledIds } from "./ShuffledIds";
 
 export { ArraysToGo__factory } from "./factories/ArraysToGo__factory";
 export { IArraysToGo__factory } from "./factories/IArraysToGo__factory";
-export { IntegrationTest__factory } from "./factories/IntegrationTest__factory";
+export { ArraysToGoIntegrationTest__factory } from "./factories/ArraysToGoIntegrationTest__factory";
+export { ShuffleIdsIntegrationTest__factory } from "./factories/ShuffleIdsIntegrationTest__factory";
+export { ShuffledIds__factory } from "./factories/ShuffledIds__factory";
