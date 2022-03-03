@@ -101,7 +101,7 @@ Distributed under the MIT License. See the `LICENSE` file for more information.
 
 Your Name - [@KnobsBlockchain](https://twitter.com/KnobsBlockchain) - info@knobs.it
 
-Project Link: [https://github.com/knobs-dev/arrays-to-go](https://github.com/knobs-dev/arrays-to-go)
+Project Link: [https://github.com/knobs-dev/contracts](https://github.com/knobs-dev/contracts)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
