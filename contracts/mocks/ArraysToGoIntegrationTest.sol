@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.12;
 
-import "./IArraysToGo.sol";
+import "../arrays/IArraysToGo.sol";
 
-contract IntegrationTest {
+contract ArraysToGoIntegrationTest {
     uint256[] public tokenIds;
 
     constructor(address arrayToGoAddress, string memory arrayName) {

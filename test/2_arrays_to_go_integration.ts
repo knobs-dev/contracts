@@ -4,18 +4,18 @@ import { ethers } from "hardhat";
 import {
   ArraysToGo,
   ArraysToGo__factory,
-  IntegrationTest__factory,
-  IntegrationTest,
+  ArraysToGoIntegrationTest__factory,
+  ArraysToGoIntegrationTest,
 } from "../typechain-types";
 
-describe("Integration", function () {
+describe("[Arrays To Go] Integration", function () {
   let arraysToGoFactory: ArraysToGo__factory;
   let arraysToGoContract: Contract;
   let arraysToGoInstance: ArraysToGo;
 
-  let testFactory: IntegrationTest__factory;
+  let testFactory: ArraysToGoIntegrationTest__factory;
   let testContract: Contract;
-  let testInstance: IntegrationTest;
+  let testInstance: ArraysToGoIntegrationTest;
 
   before(async function () {
     arraysToGoFactory = (await ethers.getContractFactory(
@@ -23,8 +23,8 @@ describe("Integration", function () {
     )) as ArraysToGo__factory;
 
     testFactory = (await ethers.getContractFactory(
-      "IntegrationTest"
-    )) as IntegrationTest__factory;
+      "ArraysToGoIntegrationTest"
+    )) as ArraysToGoIntegrationTest__factory;
   });
 
   beforeEach(async function () {
@@ -55,7 +55,9 @@ describe("Integration", function () {
       .withArgs(name, limit, hash);
 
     testContract = await testFactory.deploy(arraysToGoInstance.address, name);
-    testInstance = (await testContract.deployed().catch()) as IntegrationTest;
+    testInstance = (await testContract
+      .deployed()
+      .catch()) as ArraysToGoIntegrationTest;
 
     const array = await testInstance.getTokenIds();
 

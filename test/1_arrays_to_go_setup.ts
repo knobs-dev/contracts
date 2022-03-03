@@ -3,7 +3,7 @@ import { Contract } from "ethers";
 import { ethers } from "hardhat";
 import { ArraysToGo, ArraysToGo__factory } from "../typechain-types";
 
-describe("ArraysToGo", function () {
+describe("[Arrays To Go] Setup", function () {
   let factory: ArraysToGo__factory;
   let contract: Contract;
   let instance: ArraysToGo;

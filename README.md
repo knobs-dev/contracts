@@ -13,77 +13,28 @@
 <br />
 <div align="center">
   <a href="https://github.com/knobs-dev/arrays-to-go">
-    <img src="images/ArraysToGo.png" alt="Logo" width="160">
+    <img src="docs/images/KNOBS.png" alt="Logo" width="160">
   </a>
 
-  <h3 align="center">Arrays To Go</h3>
+  <h3 align="center">KNOBS/contracts</h3>
 
   <p align="center">
-    Community created, ready to go arrays on the Ethereum network
+    A set of useful contract for building the Web3
   </p>
 </div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project 🎙️
 
-Filling very long array of numbers on the ethereum network may be too expensive, moreover if you have to do it multiple times. That's why we thought: *"It's literally a waste of computation. Why don't we fill them once and copy the content every time we need it?"*
-
-We know, it may looks like there is no real application for that kind of smart contract, but in fact we have built it for a specific purpose 😅.
-
-There is an easy but clever way to mint NFTs with not sequential ids, but guess what? it requires to have an array with all the possible values. So, here is where this contract come in place 🚀
-
-```solidity
-contract MyAwesome10kNFTs {
-    uint256[] tokenIds;
-    constructor() {
-        tokenIds = IArraysToGo(0xfd3e...).safeGetArrayByName("OneToTenK");
-    }
-}
-```
-
-Can't you see the advantages? Filled with just one line of code 💪
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With 
 
 Hardhat + Solidity + Typescript + Solidity Coverage
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -93,48 +44,30 @@ Hardhat + Solidity + Typescript + Solidity Coverage
 Install the npm package or copy our contract interface
 * npm
   ```sh
-  npm install @knobs/arraystogo@latest
+  npm install @knobs/contracts@latest
   ```
 
 ### Installation
 
-Import our interface
+Import the contract or the interface you need
 
 ```solidity
-import "@knobs/arraystogo/IArraysToGo.sol";
+import "@knobs/contracts/[contract_name]/[contract_name].sol";
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
-## Usage 🍽️
-
-Clone an existing array
-
-```solidity
-    uint256[] oneToTenKArray = IArraysToGo(0xfd3e...).safeGetArrayByName("OneToTenK");
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap 🛣️
 
-- [ ] Release on Ropsten testnet
-- [ ] Release on Polygon mumbai testnet
-- [ ] Release on Ethereum mainnet
-- [ ] Release on Polygon mainnet
-- [ ] Fill the OneToTenK array
+- [ ] Release ArraysToGo library
+- [ ] Release ShuffledId interface
 
-See the [open issues](https://github.com/knobs-dev/arrays-to-go/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/knobs-dev/contracts/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing 🧑‍🔧
