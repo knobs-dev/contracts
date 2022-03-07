@@ -15,6 +15,10 @@ import "solidity-coverage";
 
 import { HardhatUserConfig, task } from "hardhat/config";
 
+import { getNetworks } from "./utils";
+
+import "./tasks/index";
+
 dotenv.config();
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -32,19 +36,13 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 const config: HardhatUserConfig = {
   solidity: "0.8.12",
-  networks: {
-    ropsten: {
-      url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-    },
-  },
+  networks: getNetworks(),
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
     currency: "USD",
     outputFile: "./gas-report.txt",
     noColors: true,
-    coinmarketcap: "da7a71b9-7167-4011-83ac-0cc13e3b6d0e",
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_API_KEY,

@@ -24,6 +24,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#releases">Releases</a></li>
       </ul>
     </li>
     <li>
@@ -74,6 +75,14 @@ Hardhat + Solidity + Typescript + Solidity Coverage
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Releases
+
+Network       |Address                                   |
+--------------|------------------------------------------|
+Polygon Mumbai|0x0897feffd8c14ace22c88a6Af64AaDB746b2cE8e|
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- GETTING STARTED -->
@@ -116,7 +125,7 @@ Clone an existing array
 ## Roadmap 🛣️
 
 - [ ] Release on Ropsten testnet
-- [ ] Release on Polygon mumbai testnet
+- [x] Release on Polygon mumbai testnet
 - [ ] Release on Ethereum mainnet
 - [ ] Release on Polygon mainnet
 - [ ] Fill the OneToTenK array
@@ -140,6 +149,16 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Scripts ⚙️
+
+### Fill Array progressively
+
+```bash
+npx hardhat atg/fill_progressively --contract 0x0897feffd8c14ace22c88a6Af64AaDB746b2cE8e --identifier OneToTen --from 1 --to 10 --chunklength 6 --network mumbai
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

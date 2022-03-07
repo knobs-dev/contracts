@@ -27,6 +27,11 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project 🎙️
+Contains a set of useful contracts for building web3 applications.
+
+|Project   |Network       |Address                                   |
+|----------|--------------|------------------------------------------|
+|ArraysToGo|Polygon Mumbai|0x0897feffd8c14ace22c88a6Af64AaDB746b2cE8e|
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
