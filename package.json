@@ -36,7 +36,7 @@
   "dependencies": {
     "merkletreejs": "^0.2.31"
   },
-  "description": "<div id=\"top\"></div>",
+  "description": "A set of useful Smart Contracts for Ethereum",
   "directories": {
     "doc": "docs",
     "test": "test"
