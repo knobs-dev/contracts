@@ -1,5 +1,5 @@
 {
-  "name": "arrays-to-go",
+  "name": "@knobs/contracts",
   "version": "1.3.0",
   "main": "index.js",
   "license": "MIT",
@@ -35,5 +35,23 @@
   },
   "dependencies": {
     "merkletreejs": "^0.2.31"
-  }
+  },
+  "description": "<div id=\"top\"></div>",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knobs-dev/contracts.git"
+  },
+  "keywords": [
+    "ethereum",
+    "smartcontract"
+  ],
+  "author": "KNOBS",
+  "bugs": {
+    "url": "https://github.com/knobs-dev/contracts/issues"
+  },
+  "homepage": "https://github.com/knobs-dev/contracts#readme"
 }
