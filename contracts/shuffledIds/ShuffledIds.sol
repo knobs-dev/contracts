@@ -18,7 +18,14 @@ contract ShuffledIds {
 
     function popRandomId() internal ifNotEmpty returns (uint256 idToMint) {
         uint256 randomnumber = uint256(
-            keccak256(abi.encodePacked(block.timestamp, msg.sender, nonce))
+            keccak256(
+                abi.encodePacked(
+                    block.timestamp,
+                    msg.sender,
+                    blockhash(block.number - 1),
+                    nonce
+                )
+            )
         ) % tokenIds.length;
 
         idToMint = tokenIds[randomnumber];
