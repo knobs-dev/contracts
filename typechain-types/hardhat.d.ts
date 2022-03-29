@@ -25,6 +25,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ArraysToGoIntegrationTest__factory>;
     getContractFactory(
+      name: "MerkleProofIndexedIntegrationTest",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.MerkleProofIndexedIntegrationTest__factory>;
+    getContractFactory(
       name: "ShuffleIdsIntegrationTest",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ShuffleIdsIntegrationTest__factory>;
@@ -48,6 +52,11 @@ declare module "hardhat/types/runtime" {
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ArraysToGoIntegrationTest>;
+    getContractAt(
+      name: "MerkleProofIndexedIntegrationTest",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.MerkleProofIndexedIntegrationTest>;
     getContractAt(
       name: "ShuffleIdsIntegrationTest",
       address: string,
