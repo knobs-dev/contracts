@@ -59,13 +59,12 @@ describe("[Arrays To Go] Setup", function () {
     const name = "OneToTen";
     const limit = 10;
     const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const hash = ethers.utils.solidityKeccak256(["uint256[]"], [data]);
 
     await instance.connect(account0).initialize(name, limit);
 
     expect(await instance.connect(account0).fillArrayByName(name, data))
       .to.emit(instance, "ArrayCompleted")
-      .withArgs(name, limit, hash);
+      .withArgs(name, limit);
   });
 
   it("Should not be possible to fill an array that does not belong to you", async function () {
@@ -88,20 +87,16 @@ describe("[Arrays To Go] Setup", function () {
     const name = "OneToTen";
     const limit = 10;
     const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const hash = ethers.utils.solidityKeccak256(["uint256[]"], [data]);
 
     await instance.connect(account0).initialize(name, limit);
 
     expect(await instance.connect(account0).fillArrayByName(name, data))
       .to.emit(instance, "ArrayCompleted")
-      .withArgs(name, limit, hash);
+      .withArgs(name, limit);
 
     const array = await instance.safeGetArrayByName(name);
 
-    expect(array.map((el) => el.toNumber())).to.be.eql(
-      data,
-      "Not the same array"
-    );
+    expect(array).to.be.eql(data, "Not the same array");
   });
 
   it("Should not be possible to retrieve an array that has not been fully completed using 'safeGetArrayByName'", async function () {
@@ -135,10 +130,7 @@ describe("[Arrays To Go] Setup", function () {
 
     const array = await instance.getArrayByName(name);
 
-    expect(array.map((el) => el.toNumber())).to.be.eql(
-      partialData,
-      "Not the same partial array"
-    );
+    expect(array).to.be.eql(partialData, "Not the same partial array");
   });
 
   it("Ready state should not be set if the array has been partially filled", async function () {
@@ -165,7 +157,7 @@ describe("[Arrays To Go] Setup", function () {
     const name = "OneToTenThousands";
     const limit = 10000;
     const data = Array.from({ length: limit }).map((_, i) => i + 1);
-    const hash = ethers.utils.solidityKeccak256(["uint256[]"], [data]);
+    const hash = ethers.utils.solidityKeccak256(["uint16[]"], [data]);
     const chunkLength = 180;
     const iterations = Math.ceil(limit / chunkLength);
 
@@ -187,7 +179,7 @@ describe("[Arrays To Go] Setup", function () {
             .fillArrayByName(name, data.slice(start, end))
         )
           .to.emit(instance, "ArrayCompleted")
-          .withArgs(name, limit, hash);
+          .withArgs(name, limit);
       } else {
         await instance
           .connect(account0)
@@ -202,7 +194,7 @@ describe("[Arrays To Go] Setup", function () {
     const name = "OneToTenThousands";
     const limit = 10000;
     const data = Array.from({ length: limit }).map((_, i) => i + 1);
-    const hash = ethers.utils.solidityKeccak256(["uint256[]"], [data]);
+    const hash = ethers.utils.solidityKeccak256(["uint16[]"], [data]);
     const chunkLength = 180;
     const iterations = Math.ceil(limit / chunkLength);
 
@@ -224,7 +216,7 @@ describe("[Arrays To Go] Setup", function () {
             .fillArrayByNameProgressively(name, chunkLength)
         )
           .to.emit(instance, "ArrayCompleted")
-          .withArgs(name, limit, hash);
+          .withArgs(name, limit);
       } else {
         await instance
           .connect(account0)

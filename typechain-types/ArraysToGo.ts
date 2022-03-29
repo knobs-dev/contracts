@@ -20,14 +20,16 @@ import { TypedEventFilter, TypedEvent, TypedListener, OnEvent } from "./common";
 export interface ArraysToGoInterface extends utils.Interface {
   contractName: "ArraysToGo";
   functions: {
-    "fillArrayByName(string,uint256[])": FunctionFragment;
-    "fillArrayByNameProgressively(string,uint256)": FunctionFragment;
+    "computeHash(string)": FunctionFragment;
+    "fillArrayByName(string,uint16[])": FunctionFragment;
+    "fillArrayByNameProgressively(string,uint16)": FunctionFragment;
     "getArrayByName(string)": FunctionFragment;
     "getArrayInfo(string)": FunctionFragment;
-    "initialize(string,uint256)": FunctionFragment;
+    "initialize(string,uint16)": FunctionFragment;
     "safeGetArrayByName(string)": FunctionFragment;
   };
 
+  encodeFunctionData(functionFragment: "computeHash", values: [string]): string;
   encodeFunctionData(
     functionFragment: "fillArrayByName",
     values: [string, BigNumberish[]]
@@ -54,6 +56,10 @@ export interface ArraysToGoInterface extends utils.Interface {
   ): string;
 
   decodeFunctionResult(
+    functionFragment: "computeHash",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "fillArrayByName",
     data: BytesLike
   ): Result;
@@ -76,20 +82,29 @@ export interface ArraysToGoInterface extends utils.Interface {
   ): Result;
 
   events: {
-    "ArrayCompleted(string,uint256,bytes32)": EventFragment;
+    "ArrayCompleted(string,uint256)": EventFragment;
+    "ArrayHashed(string,uint256,bytes32)": EventFragment;
     "ArrayInitialized(string,uint256)": EventFragment;
   };
 
   getEvent(nameOrSignatureOrTopic: "ArrayCompleted"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "ArrayHashed"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "ArrayInitialized"): EventFragment;
 }
 
 export type ArrayCompletedEvent = TypedEvent<
+  [string, BigNumber],
+  { name: string; limit: BigNumber }
+>;
+
+export type ArrayCompletedEventFilter = TypedEventFilter<ArrayCompletedEvent>;
+
+export type ArrayHashedEvent = TypedEvent<
   [string, BigNumber, string],
   { name: string; limit: BigNumber; hash: string }
 >;
 
-export type ArrayCompletedEventFilter = TypedEventFilter<ArrayCompletedEvent>;
+export type ArrayHashedEventFilter = TypedEventFilter<ArrayHashedEvent>;
 
 export type ArrayInitializedEvent = TypedEvent<
   [string, BigNumber],
@@ -127,6 +142,11 @@ export interface ArraysToGo extends BaseContract {
   removeListener: OnEvent<this>;
 
   functions: {
+    computeHash(
+      arrayName: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<ContractTransaction>;
+
     fillArrayByName(
       arrayName: string,
       data: BigNumberish[],
@@ -142,7 +162,7 @@ export interface ArraysToGo extends BaseContract {
     getArrayByName(
       arrayName: string,
       overrides?: CallOverrides
-    ): Promise<[BigNumber[]]>;
+    ): Promise<[number[]]>;
 
     getArrayInfo(
       arrayName: string,
@@ -158,8 +178,13 @@ export interface ArraysToGo extends BaseContract {
     safeGetArrayByName(
       arrayName: string,
       overrides?: CallOverrides
-    ): Promise<[BigNumber[]]>;
+    ): Promise<[number[]]>;
   };
+
+  computeHash(
+    arrayName: string,
+    overrides?: Overrides & { from?: string | Promise<string> }
+  ): Promise<ContractTransaction>;
 
   fillArrayByName(
     arrayName: string,
@@ -176,7 +201,7 @@ export interface ArraysToGo extends BaseContract {
   getArrayByName(
     arrayName: string,
     overrides?: CallOverrides
-  ): Promise<BigNumber[]>;
+  ): Promise<number[]>;
 
   getArrayInfo(
     arrayName: string,
@@ -192,9 +217,11 @@ export interface ArraysToGo extends BaseContract {
   safeGetArrayByName(
     arrayName: string,
     overrides?: CallOverrides
-  ): Promise<BigNumber[]>;
+  ): Promise<number[]>;
 
   callStatic: {
+    computeHash(arrayName: string, overrides?: CallOverrides): Promise<void>;
+
     fillArrayByName(
       arrayName: string,
       data: BigNumberish[],
@@ -210,7 +237,7 @@ export interface ArraysToGo extends BaseContract {
     getArrayByName(
       arrayName: string,
       overrides?: CallOverrides
-    ): Promise<BigNumber[]>;
+    ): Promise<number[]>;
 
     getArrayInfo(
       arrayName: string,
@@ -226,20 +253,29 @@ export interface ArraysToGo extends BaseContract {
     safeGetArrayByName(
       arrayName: string,
       overrides?: CallOverrides
-    ): Promise<BigNumber[]>;
+    ): Promise<number[]>;
   };
 
   filters: {
-    "ArrayCompleted(string,uint256,bytes32)"(
+    "ArrayCompleted(string,uint256)"(
       name?: string | null,
-      limit?: BigNumberish | null,
-      hash?: BytesLike | null
+      limit?: BigNumberish | null
     ): ArrayCompletedEventFilter;
     ArrayCompleted(
       name?: string | null,
+      limit?: BigNumberish | null
+    ): ArrayCompletedEventFilter;
+
+    "ArrayHashed(string,uint256,bytes32)"(
+      name?: string | null,
       limit?: BigNumberish | null,
       hash?: BytesLike | null
-    ): ArrayCompletedEventFilter;
+    ): ArrayHashedEventFilter;
+    ArrayHashed(
+      name?: string | null,
+      limit?: BigNumberish | null,
+      hash?: BytesLike | null
+    ): ArrayHashedEventFilter;
 
     "ArrayInitialized(string,uint256)"(
       name?: string | null,
@@ -252,6 +288,11 @@ export interface ArraysToGo extends BaseContract {
   };
 
   estimateGas: {
+    computeHash(
+      arrayName: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<BigNumber>;
+
     fillArrayByName(
       arrayName: string,
       data: BigNumberish[],
@@ -287,6 +328,11 @@ export interface ArraysToGo extends BaseContract {
   };
 
   populateTransaction: {
+    computeHash(
+      arrayName: string,
+      overrides?: Overrides & { from?: string | Promise<string> }
+    ): Promise<PopulatedTransaction>;
+
     fillArrayByName(
       arrayName: string,
       data: BigNumberish[],

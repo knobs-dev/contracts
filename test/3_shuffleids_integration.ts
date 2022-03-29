@@ -44,7 +44,6 @@ describe("[Shuffled Ids] Integration", function () {
     const name = "OneToTen";
     const limit = 10;
     const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const hash = ethers.utils.solidityKeccak256(["uint256[]"], [data]);
 
     await arraysToGoInstance.connect(account0).initialize(name, limit);
 
@@ -52,7 +51,7 @@ describe("[Shuffled Ids] Integration", function () {
       await arraysToGoInstance.connect(account0).fillArrayByName(name, data)
     )
       .to.emit(arraysToGoInstance, "ArrayCompleted")
-      .withArgs(name, limit, hash);
+      .withArgs(name, limit);
 
     testContract = await testFactory.deploy(arraysToGoInstance.address, name);
     testInstance = (await testContract
