@@ -4,11 +4,13 @@
 export type { ArraysToGo } from "./ArraysToGo";
 export type { IArraysToGo } from "./IArraysToGo";
 export type { ArraysToGoIntegrationTest } from "./ArraysToGoIntegrationTest";
+export type { MerkleProofIndexedIntegrationTest } from "./MerkleProofIndexedIntegrationTest";
 export type { ShuffleIdsIntegrationTest } from "./ShuffleIdsIntegrationTest";
 export type { ShuffledIds } from "./ShuffledIds";
 
 export { ArraysToGo__factory } from "./factories/ArraysToGo__factory";
 export { IArraysToGo__factory } from "./factories/IArraysToGo__factory";
 export { ArraysToGoIntegrationTest__factory } from "./factories/ArraysToGoIntegrationTest__factory";
+export { MerkleProofIndexedIntegrationTest__factory } from "./factories/MerkleProofIndexedIntegrationTest__factory";
 export { ShuffleIdsIntegrationTest__factory } from "./factories/ShuffleIdsIntegrationTest__factory";
 export { ShuffledIds__factory } from "./factories/ShuffledIds__factory";
