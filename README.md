@@ -33,7 +33,7 @@ Contains a set of useful contracts for building web3 applications.
 
 |Project   |Network       |Address                                   |
 |----------|--------------|------------------------------------------|
-|ArraysToGo|Polygon Mumbai|0x0897feffd8c14ace22c88a6Af64AaDB746b2cE8e|
+|ArraysToGo|Polygon Mumbai|0x75e090AacB2C5c82D7C02510Ab10c88fB7a43897|
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
