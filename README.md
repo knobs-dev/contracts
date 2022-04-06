@@ -1,11 +1,13 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![NPM][npm-version-shield]][npm-version-url]
+[![Build][build-shield]][build-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<hr/>
+
+[![Stars][github-stars-shield]][github-stars-url]
+[![Twitter][twitter-shield]][twitter-url]
 
 
 
@@ -123,18 +125,16 @@ Project Link: [https://github.com/knobs-dev/contracts](https://github.com/knobs-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/knobs-dev/contracts.svg?style=for-the-badge
-[contributors-url]: https://github.com/knobs-dev/contracts/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/knobs-dev/contracts.svg?style=for-the-badge
-[forks-url]: https://github.com/knobs-dev/contracts/network/members
-[stars-shield]: https://img.shields.io/github/stars/knobs-dev/contracts.svg?style=for-the-badge
-[stars-url]: https://github.com/knobs-dev/contracts/stargazers
-[issues-shield]: https://img.shields.io/github/issues/knobs-dev/contracts.svg?style=for-the-badge
-[issues-url]: https://github.com/knobs-dev/contracts/issues
-[license-shield]: https://img.shields.io/github/license/knobs-dev/contracts.svg?style=for-the-badge
+[npm-version-shield]: https://img.shields.io/npm/v/@knobs/contracts
+[npm-version-url]: https://www.npmjs.com/package/@knobs/contracts
+[build-shield]: https://img.shields.io/github/workflow/status/knobs-dev/contracts/Test%20and%20Publish
+[build-url]: https://www.npmjs.com/package/@knobs/contracts
+[github-stars-shield]: https://img.shields.io/github/stars/knobs-dev?style=social
+[github-stars-url]: https://github.com/knobs-dev/contracts
+[license-shield]: https://img.shields.io/github/license/knobs-dev/contracts
 [license-url]: https://github.com/knobs-dev/contracts/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/company/knobs-blockchain/
+[twitter-shield]: https://img.shields.io/twitter/follow/KnobsBlockchain?style=social
+[twitter-url]: https://twitter.com/KnobsBlockchain
 
 
 
