@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { Contract } from "ethers";
+import { BigNumber, Contract } from "ethers";
 import { ethers } from "hardhat";
 import { ArraysToGo, ArraysToGo__factory } from "../typechain-types";
 
@@ -223,5 +223,85 @@ describe("[Arrays To Go] Setup", function () {
           .fillArrayByNameProgressively(name, chunkLength);
       }
     }
+  });
+
+  it("Should not contain the hash by default after it has been completely filled", async function () {
+    const [account0] = await ethers.getSigners();
+
+    const name = "OneToTen";
+    const limit = 10;
+    const chunkLength = 5;
+    const iterations = Math.ceil(limit / chunkLength);
+
+    await instance.connect(account0).initialize(name, limit);
+
+    for (let i = 0; i < iterations; i++) {
+      await instance
+        .connect(account0)
+        .fillArrayByNameProgressively(name, chunkLength);
+    }
+
+    const [
+      _ceratorBefore,
+      _limitBefore,
+      readyBefore,
+      hashBefore,
+      _lengthBefore,
+    ] = await instance.connect(account0).getArrayInfo(name);
+
+    expect(BigNumber.from(hashBefore)).to.be.eq(0, "Hash already initialized");
+    expect(readyBefore).to.be.true;
+  });
+
+  it("Should contain the hash of a completely filled array after calling the proper function", async function () {
+    const [account0] = await ethers.getSigners();
+
+    const name = "OneToTen";
+    const limit = 10;
+    const data = Array.from({ length: limit }).map((_, i) => i + 1);
+    const hash = ethers.utils.solidityKeccak256(["uint16[]"], [data]);
+    const chunkLength = 5;
+    const iterations = Math.ceil(limit / chunkLength);
+
+    await instance.connect(account0).initialize(name, limit);
+
+    for (let i = 0; i < iterations; i++) {
+      await instance
+        .connect(account0)
+        .fillArrayByNameProgressively(name, chunkLength);
+    }
+
+    const [
+      _ceratorBefore,
+      _limitBefore,
+      readyBefore,
+      hashBefore,
+      _lengthBefore,
+    ] = await instance.connect(account0).getArrayInfo(name);
+
+    expect(BigNumber.from(hashBefore)).to.be.eq(0, "Hash already initialized");
+    expect(readyBefore).to.be.true;
+
+    await instance.connect(account0).computeHash(name);
+
+    const [_ceratorAfter, _limitAfter, _readyAfter, hashAfter, _lengthAfter] =
+      await instance.connect(account0).getArrayInfo(name);
+
+    expect(hashAfter).to.be.equal(hash, "Hash mismatch");
+  });
+
+  it("Only the creator can compute the hash", async function () {
+    const [account0, account1] = await ethers.getSigners();
+
+    const name = "OneToTen";
+    const limit = 10;
+
+    await instance.connect(account0).initialize(name, limit);
+
+    await instance.connect(account0).fillArrayByNameProgressively(name, limit);
+
+    expect(instance.connect(account1).computeHash(name)).to.be.revertedWith(
+      "Not the creator"
+    );
   });
 });
