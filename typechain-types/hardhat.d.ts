@@ -33,9 +33,17 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ShuffleIdsIntegrationTest__factory>;
     getContractFactory(
+      name: "ShuffleIdsV2IntegrationTest",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ShuffleIdsV2IntegrationTest__factory>;
+    getContractFactory(
       name: "ShuffledIds",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ShuffledIds__factory>;
+    getContractFactory(
+      name: "ShuffledIdsV2",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ShuffledIdsV2__factory>;
 
     getContractAt(
       name: "ArraysToGo",
@@ -63,10 +71,20 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.ShuffleIdsIntegrationTest>;
     getContractAt(
+      name: "ShuffleIdsV2IntegrationTest",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ShuffleIdsV2IntegrationTest>;
+    getContractAt(
       name: "ShuffledIds",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ShuffledIds>;
+    getContractAt(
+      name: "ShuffledIdsV2",
+      address: string,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ShuffledIdsV2>;
 
     // default types
     getContractFactory(
