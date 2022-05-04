@@ -13,73 +13,28 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
-      name: "ArraysToGo",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ArraysToGo__factory>;
-    getContractFactory(
-      name: "IArraysToGo",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IArraysToGo__factory>;
-    getContractFactory(
-      name: "ArraysToGoIntegrationTest",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ArraysToGoIntegrationTest__factory>;
-    getContractFactory(
       name: "MerkleProofIndexedIntegrationTest",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.MerkleProofIndexedIntegrationTest__factory>;
     getContractFactory(
-      name: "ShuffleIdsIntegrationTest",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ShuffleIdsIntegrationTest__factory>;
-    getContractFactory(
       name: "ShuffleIdsV2IntegrationTest",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ShuffleIdsV2IntegrationTest__factory>;
-    getContractFactory(
-      name: "ShuffledIds",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ShuffledIds__factory>;
     getContractFactory(
       name: "ShuffledIdsV2",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.ShuffledIdsV2__factory>;
 
     getContractAt(
-      name: "ArraysToGo",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ArraysToGo>;
-    getContractAt(
-      name: "IArraysToGo",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IArraysToGo>;
-    getContractAt(
-      name: "ArraysToGoIntegrationTest",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ArraysToGoIntegrationTest>;
-    getContractAt(
       name: "MerkleProofIndexedIntegrationTest",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.MerkleProofIndexedIntegrationTest>;
     getContractAt(
-      name: "ShuffleIdsIntegrationTest",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ShuffleIdsIntegrationTest>;
-    getContractAt(
       name: "ShuffleIdsV2IntegrationTest",
       address: string,
       signer?: ethers.Signer
     ): Promise<Contracts.ShuffleIdsV2IntegrationTest>;
-    getContractAt(
-      name: "ShuffledIds",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ShuffledIds>;
     getContractAt(
       name: "ShuffledIdsV2",
       address: string,
