@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: AGPLv3
 pragma solidity ^0.8.12;
 
 import "../shuffledIds/ShuffledIdsV2.sol";
