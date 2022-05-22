@@ -2,7 +2,7 @@
 
 [![NPM][npm-version-shield]][npm-version-url]
 [![Build][build-shield]][build-url]
-[![MIT License][license-shield]][license-url]
+[![License][license-shield]][license-url]
 
 <hr/>
 
@@ -127,7 +127,7 @@ Project Link: [https://github.com/knobs-dev/contracts](https://github.com/knobs-
 [github-stars-shield]: https://img.shields.io/github/stars/knobs-dev?style=social
 [github-stars-url]: https://github.com/knobs-dev/contracts
 [license-shield]: https://img.shields.io/github/license/knobs-dev/contracts
-[license-url]: https://github.com/knobs-dev/contracts/blob/master/LICENSE.txt
+[license-url]: https://github.com/knobs-dev/contracts/blob/master/LICENSE
 [twitter-shield]: https://img.shields.io/twitter/follow/KnobsBlockchain?style=social
 [twitter-url]: https://twitter.com/KnobsBlockchain
 
