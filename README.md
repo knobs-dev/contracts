@@ -65,7 +65,8 @@ import "@knobs/contracts/[contract_name]/[contract_name].sol";
 <!-- ROADMAP -->
 ## Roadmap 🛣️
 
-- [x] Release ShuffledId interface
+- [x] Release Merkleproof Indexed library
+- [x] Release ShuffledIds library
 
 See the [open issues](https://github.com/knobs-dev/contracts/issues) for a full list of proposed features (and known issues).
 
