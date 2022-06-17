@@ -2,9 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { MerkleProofIndexedIntegrationTest } from "./MerkleProofIndexedIntegrationTest";
+export type { ShuffledIdsLibIntegrationTest } from "./ShuffledIdsLibIntegrationTest";
 export type { ShuffleIdsV2IntegrationTest } from "./ShuffleIdsV2IntegrationTest";
 export type { ShuffledIdsV2 } from "./ShuffledIdsV2";
 
 export { MerkleProofIndexedIntegrationTest__factory } from "./factories/MerkleProofIndexedIntegrationTest__factory";
+export { ShuffledIdsLibIntegrationTest__factory } from "./factories/ShuffledIdsLibIntegrationTest__factory";
 export { ShuffleIdsV2IntegrationTest__factory } from "./factories/ShuffleIdsV2IntegrationTest__factory";
 export { ShuffledIdsV2__factory } from "./factories/ShuffledIdsV2__factory";
